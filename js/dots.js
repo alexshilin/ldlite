@@ -559,6 +559,7 @@ function main(){
 	$('.purchase-btn').click(function(){
 		currNav = "purchase";
 		playS(s_btn);
+		packPreviews();
 		$('#purchase').fadeIn('fast');
 	})
 	$('#purchase-back .btn').click(function(){
