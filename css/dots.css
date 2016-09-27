@@ -55,6 +55,43 @@ body, html{
 		height:30px;
 	}
 }
+.logo-lite {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    margin: 0 0 0 -50px;
+}
+.logo-lite svg {
+    width: inherit;
+    height: inherit;
+}
+.logo-lite svg path {
+    fill: #18d498;
+    stroke: #18d498;
+    stroke-width: .1px;
+}
+.upgrade-btn, .upgrade-btn2{
+    width: 120px;
+    background: #37cd82;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    margin: 0 0 0 -60px;
+    color: white;
+	font-size:12px;
+	line-height:12px;
+}
+.upgrade-btn2 {
+    bottom: initial;
+    top: 12px;
+    right: 10px;
+    left: initial;
+}
+
 #dots{
 	display:none;
 	margin:0 auto;
@@ -407,7 +444,7 @@ body, html{
 	position: fixed;
     top: 0;
     left: 0;
-    padding-left: 10px;
+    padding: 2px 0 0 10px;
     color: white;
     text-align: left;
     width: 100%;

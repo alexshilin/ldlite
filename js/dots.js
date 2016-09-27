@@ -579,7 +579,7 @@ function main(){
 				$(".samples").append($packbox);
 				var $pack = $("<div>", {"class": "row", "style":"margin:0 auto; width:100%; max-width:600px;"});
 				$packbox.append($pack);
-				var $header = $("<div>", {"class":"row", "style":"color:white"});
+				var $header = $("<div>", {"class":"row", "style":"color:white; font-size:14px"});
 				$header.html(SVGpacks[i].name);
 				$pack.append($header);
 				for(var k=0; k<s.length; k++){
@@ -624,7 +624,7 @@ function main(){
 		
 			var css = ' translateX(0px) translateY(0) scale(1, 1)';
 			setCss($('#hello'), css);
-			if(SETTINGS.help) SETTINGS.help=false, wrongs = 0, $('#hint i').removeClass('ion-happy').addClass('ion-sad');
+			if(SETTINGS.help) SETTINGS.help=false, wrongs = 0, $('#hint i').removeClass('ion-android-happy').addClass('ion-android-sad');
 		
 			gateCheck();
 		}
@@ -644,7 +644,7 @@ function main(){
 					$d.removeClass('blink').addClass('on')
 				}
 			}
-			$('#hint i').removeClass('ion-happy').addClass('ion-sad');
+			$('#hint i').removeClass('ion-android-happy').addClass('ion-android-sad');
 			wrongs = 0;
 			SETTINGS.help = false;
 		}else{
@@ -657,7 +657,8 @@ function main(){
 			}
 			$('.dot' + curr + ' .tracking__scale').addClass('on blink').css('opacity',1);
 			setDotScale($('.dot' + curr), SETTINGS.dotscale.max, SETTINGS.diameter);
-			$('#hint i').removeClass('ion-sad').addClass('ion-happy');
+			$('#hint i').removeClass('ion-android-sad').addClass('ion-android-happy');
+			playS(s_hint);
 			SETTINGS.help = true;
 		}
 	});
@@ -668,7 +669,7 @@ function main(){
 		$('#hello').empty();
 		var css = ' translateX(0px) translateY(0) scale(1, 1)';
 		setCss($('#hello'), css);
-		if(SETTINGS.help) SETTINGS.help=false, wrongs = 0, $('#hint i').removeClass('ion-happy').addClass('ion-sad');
+		if(SETTINGS.help) SETTINGS.help=false, wrongs = 0, $('#hint i').removeClass('ion-android-happy').addClass('ion-android-sad');
 		
 		gateCheck(true);
 	})
