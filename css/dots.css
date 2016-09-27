@@ -19,6 +19,7 @@ body, html{
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
+	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 
 .noSelect {

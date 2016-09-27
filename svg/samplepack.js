@@ -68,32 +68,26 @@ PACKS
 
 */
 var PACK0 = {
-	id:"com.lebored.lazydots.test.pack0",
 	name:"SAMPLER",
-	items:[turkeySVG, pigSVG, seaturtleSVG, blowfishSVG, toadSVG, beaverSVG, parrotSVG, zebraSVG, triceratopsSVG, parasaurolophusSVG]
+	items:[turkeySVG, blowfishSVG, toadSVG, zebraSVG, triceratopsSVG]
 };
 var PACK1 = {
-	id:"com.lebored.lazydots.test.pack1",
 	name:"FARM",
 	items:[dogSVG, turkeySVG, horseSVG, duckSVG, pigSVG, roosterSVG, cowSVG, bunnySVG, kittenSVG, sheepSVG]
 }
 var PACK2 = {
-	id:"com.lebored.lazydots.test.pack2",
 	name:"OCEAN",
 	items:[seaturtleSVG, dolphinSVG, blowfishSVG, penguinSVG, seahorseSVG, hammerheadSVG, octopusSVG, starfishSVG, jellyfishSVG, walrusSVG]
 }
 var PACK3 = {
-	id:"com.lebored.lazydots.test.pack3",
 	name:"FOREST",
 	items:[bearSVG, toadSVG, skunkSVG, wolfSVG, eagleSVG, raccoonSVG, hedgehogSVG, owlSVG, beaverSVG, mooseSVG]
 }
 var PACK4 = {
-	id:"com.lebored.lazydots.test.pack4",
 	name:"JUNGLE",
 	items:[parrotSVG, monkeySVG, jaguarSVG, hippoSVG, zebraSVG, toucanSVG, rhinoSVG, elephantSVG, lionSVG, snakeSVG]
 }
 var PACK5 = {
-	id:"com.lebored.lazydots.test.pack5",
 	name:"DINOSAURS",
 	items:[trexSVG, spinosaurusSVG, velociraptorSVG, triceratopsSVG, kronosaurusSVG, quetzalcoatlusSVG, stegosaurusSVG, dilophosaurusSVG, parasaurolophusSVG, ankylosaurusSVG]
 }
@@ -103,18 +97,7 @@ var PACK5 = {
 INITAL APP DATA
 
 */
-var allId = "com.lebored.lazydots.test.allpacks";
 var appData = {
-	/*
-	packsAvailable: ["com.lebored.lazydots.test.pack0", "com.lebored.lazydots.test.pack1", "com.lebored.lazydots.test.pack2", "com.lebored.lazydots.test.pack3", "com.lebored.lazydots.test.pack4", "com.lebored.lazydots.test.pack5"],
-	packsPurchased: [
-		{
-			id:"com.lebored.lazydots.test.pack0",
-			itemsCompleted:[]
-		}
-	],
-	allPurchased: 0, //0=no, 1=yes
-	*/
 	audioSetting: 1, //0=mute, 1=beeps, 2=farts
 	typeSetting: 0, //0=numbers, 1=letters
 	petSetting: 0, //0=bunny, 1=frog
