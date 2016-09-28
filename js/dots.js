@@ -393,8 +393,6 @@ function main(){
 			clickcnt=0;
 			localforage.clear(function(err) {
 				console.log('CLEARED');
-				full = full ? false : true;
-				litefull();
 				appSet=false;
 				getStorage();
 			});
@@ -605,7 +603,7 @@ function main(){
 				var $pack = $("<div>", {"class": "row", "style":"margin:0 auto; width:100%; max-width:600px;"});
 				$packbox.append($pack);
 				var txt = OKtoplay[i] == "true" ? "" : "color:#37cd82";
-				var $header = $("<div>", {"class":"row", "style":"color:white; font-size:14px; "+txt});
+				var $header = $("<div>", {"class":"row", "style":"color:white; font-size:14px; font-weight:bold; "+txt});
 				$header.html(SVGpacks[i].name);
 				$pack.append($header);
 				for(var k=0; k<s.length; k++){
