@@ -19,8 +19,21 @@ console.log = (function (old_function, div_log) {
 APP VARS
 
 */
-var SVGpacks = [PACK0, PACK1, PACK2, PACK3, PACK4, PACK5];
-var OKtoplay = ["true", "false", "false", "false", "false", "false"];
+var full = false;
+var SVGpacks = [];
+var OKtoplay = [];
+litefull();
+function litefull(){
+	if(!full){
+		SVGpacks = [PACK0, PACK1, PACK2, PACK3, PACK4, PACK5];
+		OKtoplay = ["true", "false", "false", "false", "false", "false"];
+		$('.lite').show();
+	}else{
+		SVGpacks = [PACK1, PACK2, PACK3, PACK4, PACK5];
+		OKtoplay = ["true", "true", "true", "true", "true"];
+	}
+}
+
 
 var difficulty_numbers = [10, 20];
 var difficulty_letters = ["ab", "AB"];
@@ -379,8 +392,9 @@ function main(){
 			clickcnt=0;
 			localforage.clear(function(err) {
 				console.log('CLEARED');
+				full = full ? false : true;
+				litefull();
 				appSet=false;
-				//checkedPurchases=false;
 				getStorage();
 			});
 		}

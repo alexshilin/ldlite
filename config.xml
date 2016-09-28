@@ -3,7 +3,7 @@
 		xmlns:android="http://schemas.android.com/apk/res/android" 
 		id="com.lebored.lazydots.lite" 
 		version="1.0.0"
-		android-versionCode="6">
+		android-versionCode="7">
 		
   <name>Lazy Dots (lite)</name>
   <description>lazy dots test.</description>
