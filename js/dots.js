@@ -263,8 +263,22 @@ LOCAL STORAGE
 */
 var tmpDATA;
 var sKEY = 'lebored.ld.data';
-var checkedPurchases = false;
-var productsPurchased = [];
+
+function compareDataObjects(a, b){
+	var aKeys = Object.keys(a).sort();
+	var bKeys = Object.keys(b).sort();
+	var equal = JSON.stringify(aKeys) === JSON.stringify(bKeys);
+	if(!equal){
+		console.log("new data, updating storage...");
+		var tmp = appData;
+		for (var i in a) {
+			if (b.hasOwnProperty(i)) tmp[i]=b[i];
+		}
+		return tmp;
+	}else{
+		return b;
+	}
+}
 
 function getStorage(){
 	console.log('checking storage for: '+sKEY)
@@ -272,7 +286,9 @@ function getStorage(){
 		.then(function(value){
 			if(value){
 				console.log('exists!')
-				updateData(value);
+				tmpDATA = value;
+				tmpDATA = compareDataObjects(appData, tmpDATA);
+				updateData();
 			}else{
 				console.log('doesnt exist...');
 				setStorage(appData);
@@ -299,17 +315,12 @@ function setStorage(v){
 }
 function updateData(v){
 	console.log('latest: ');
-	tmpDATA = v;
 	console.log(JSON.stringify( tmpDATA ));
 	if(!appSet){
 		appSet = true;
 		setApp();
 		preloadSounds2();
 	}
-	/*if(!checkedPurchases){
-		checkedPurchases = true;
-		getProducts();
-	}*/
 }
 function setApp(){
 	//update audio settings
@@ -425,24 +436,25 @@ function main(){
 		gateCheck();
 	}
 	
-	function gateCheck(checkPurchase){
-		
-		if(tmpDATA.lastItemPlayed<SVGpacks[tmpDATA.lastPackPlayed].items.length-1) {
-			//yes, go to next one
-			tmpDATA.lastItemPlayed++;
-			setStorage(tmpDATA);
-		}else{
-			//no, check remaining packs
-			//loop through packs starting at the next pack and loop back around if need be
-			var offset = tmpDATA.lastPackPlayed+1;
-			for( var i=0; i < OKtoplay.length; i++) {
-			    var pointer = (i + offset) % OKtoplay.length;
-				if(OKtoplay[pointer]==="true") {
-					//whichever upcoming pack has been purchased, go to that one
-					tmpDATA.lastPackPlayed = pointer;
-					tmpDATA.lastItemPlayed = 0;
-					setStorage(tmpDATA);
-					break;
+	function gateCheck(goNext){
+		if(goNext){
+			if(tmpDATA.lastItemPlayed<SVGpacks[tmpDATA.lastPackPlayed].items.length-1) {
+				//yes, go to next one
+				tmpDATA.lastItemPlayed++;
+				setStorage(tmpDATA);
+			}else{
+				//no, check remaining packs
+				//loop through packs starting at the next pack and loop back around if need be
+				var offset = tmpDATA.lastPackPlayed+1;
+				for( var i=0; i < OKtoplay.length; i++) {
+				    var pointer = (i + offset) % OKtoplay.length;
+					if(OKtoplay[pointer]==="true") {
+						//whichever upcoming pack has been purchased, go to that one
+						tmpDATA.lastPackPlayed = pointer;
+						tmpDATA.lastItemPlayed = 0;
+						setStorage(tmpDATA);
+						break;
+					}
 				}
 			}
 		}
@@ -456,10 +468,6 @@ function main(){
 		$('#next').removeClass('blink').css({'top':'0px'});
 		$('#nextbig').css({'bottom':'-100px'})
 		$('#settings, #options, #gallery, #dots').hide();
-		
-		var pck = (tmpDATA.lastPackPlayed+1)<9 ? "0"+(tmpDATA.lastPackPlayed+1) : (tmpDATA.lastPackPlayed+1);
-		var itm = (tmpDATA.lastItemPlayed+1)<9 ? "0"+(tmpDATA.lastItemPlayed+1) : (tmpDATA.lastItemPlayed+1);
-		$('.level').html(pck+" "+itm);
 		
 		$('#gate').fadeIn();
 		
