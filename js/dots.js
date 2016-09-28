@@ -31,6 +31,7 @@ function litefull(){
 	}else{
 		SVGpacks = [PACK1, PACK2, PACK3, PACK4, PACK5];
 		OKtoplay = ["true", "true", "true", "true", "true"];
+		$('.lite').hide();
 	}
 }
 
@@ -499,6 +500,7 @@ function main(){
 			sounds = s_beeps.slice();
 			usedsounds = [];
 			playRandomSound();
+			$('.audio-header .selection').html("BEEP BOOPS");
 			tmpDATA.audioSetting=1;
 			setStorage(tmpDATA);
 		}
@@ -510,6 +512,7 @@ function main(){
 			sounds = s_farts.slice();
 			usedsounds = [];
 			playRandomSound();
+			$('.audio-header .selection').html("TOOT TOOTS");
 			tmpDATA.audioSetting=2;
 			setStorage(tmpDATA);
 		}
@@ -518,6 +521,7 @@ function main(){
 			//turn off sound
 			playS(s_shh);
 			SETTINGS.isMute = true;
+			$('.audio-header .selection').html("MUTE");
 			tmpDATA.audioSetting=0;
 			setStorage(tmpDATA);
 		}
@@ -529,6 +533,7 @@ function main(){
 		if($(this).hasClass('bunny')){
 			console.log(' bunny');
 			playS(s_btn);
+			$('.pets-header .selection').html("BUNNY");
 			pet = 'bunny';
 			tmpDATA.petSetting=0;
 			setStorage(tmpDATA);
@@ -536,6 +541,7 @@ function main(){
 		if($(this).hasClass('frog')){
 			console.log(' frog');
 			playS(s_btn);
+			$('.pets-header .selection').html("FROG");
 			pet = 'frog';
 			tmpDATA.petSetting=1;
 			setStorage(tmpDATA);
@@ -547,18 +553,21 @@ function main(){
 		$(this).addClass('selected');
 		if($(this).hasClass('ten')){
 			console.log(' ten');
+			$('.numbers-header .selection').html("TEN");
 			playS(s_btn);
 			tmpDATA.numberSetting=10;
 			setStorage(tmpDATA);
 		}
 		if($(this).hasClass('fifteen')){
 			console.log(' fifteen');
+			$('.numbers-header .selection').html("FIFTEEN");
 			playS(s_btn);
 			tmpDATA.numberSetting=15;
 			setStorage(tmpDATA);
 		}
 		if($(this).hasClass('twenty')){
 			console.log(' twenty');
+			$('.numbers-header .selection').html("TWENTY");
 			playS(s_btn);
 			tmpDATA.numberSetting=20;
 			setStorage(tmpDATA);

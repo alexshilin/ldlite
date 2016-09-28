@@ -463,6 +463,12 @@ body, html{
     padding: 5px 0;
     background: #d21566;
 }
+.option-name .title {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+	font-weight: bold;
+}
 .option-type {
     text-align: center;
     margin: 0 0 10px 0px;
