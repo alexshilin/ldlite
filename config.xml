@@ -3,9 +3,9 @@
 		xmlns:android="http://schemas.android.com/apk/res/android" 
 		id="com.lebored.lazydots.lite" 
 		version="1.0.0"
-		android-versionCode="10">
+		android-versionCode="11">
 		
-  <name>Lazy Dots (lite)</name>
+  <name>Lazy Dots LITE</name>
   <description>lazy dots test.</description>
   <author href="http://phonegap.com" email="support@phonegap.com">Lebored, LLC.</author>
   <content src="index.html"/>
