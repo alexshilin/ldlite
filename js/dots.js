@@ -556,18 +556,20 @@ function main(){
 	GALLERY
 	
 	*/
+	packPreviews();
+	
 	$('.purchase-btn').click(function(){
 		currNav = "purchase";
 		playS(s_btn);
-		packPreviews();
 		$('#purchase').fadeIn('fast');
 	})
 	$('#purchase-back .btn').click(function(){
 		currNav = "home";
 		playS(s_back);
-		$('#purchase').fadeOut('fast', function(){
+		$('#purchase').fadeOut('fast');
+		/*$('#purchase').fadeOut('fast', function(){
 			$('#purchase .samples').empty();
-		});
+		});*/
 	})
 	
 	function packPreviews(){
@@ -579,7 +581,8 @@ function main(){
 				$(".samples").append($packbox);
 				var $pack = $("<div>", {"class": "row", "style":"margin:0 auto; width:100%; max-width:600px;"});
 				$packbox.append($pack);
-				var $header = $("<div>", {"class":"row", "style":"color:white; font-size:14px"});
+				var txt = OKtoplay[i] == "true" ? "" : "color:#37cd82";
+				var $header = $("<div>", {"class":"row", "style":"color:white; font-size:14px; "+txt});
 				$header.html(SVGpacks[i].name);
 				$pack.append($header);
 				for(var k=0; k<s.length; k++){

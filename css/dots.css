@@ -19,7 +19,6 @@ body, html{
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
-	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 
 .noSelect {
@@ -85,6 +84,7 @@ body, html{
     color: white;
 	font-size:12px;
 	line-height:12px;
+	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 .upgrade-btn2 {
     bottom: initial;
@@ -374,6 +374,7 @@ body, html{
 	height:40px;
 	margin:0 0 0 0;
 	text-align:center;
+	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 .purchase-btn{
 	position:absolute;
@@ -386,6 +387,7 @@ body, html{
 	height:40px;
 	margin:0 0 0 0;
 	text-align:center;
+	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 
 #purchase{
@@ -453,9 +455,11 @@ body, html{
     line-height: 45px;
     font-size: 30px;
     background: #e71d73;
+	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 #options-back .btn{
 	cursor:pointer;
+	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 .option-name {
     text-align: center;
