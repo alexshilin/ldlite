@@ -367,27 +367,19 @@ body, html{
 	position:absolute;
 	bottom:10px;
 	left:10px;
-	color:#e71d73;
-	font-size:36px;
-	line-height:40px;
 	width:40px;
 	height:40px;
-	margin:0 0 0 0;
-	text-align:center;
-	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
 }
 .purchase-btn{
 	position:absolute;
 	bottom:10px;
 	right:10px;
-	color:#e71d73;
-	font-size:35px;
-	line-height:40px;
 	width:40px;
 	height:40px;
-	margin:0 0 0 0;
-	text-align:center;
-	max-height: 999999px; /*chrome webview font booster hack to prevent line-height bug*/
+}
+.options-btn svg, .purchase-btn svg {
+    width: inherit;
+    height: inherit;
 }
 
 #purchase{

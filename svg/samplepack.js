@@ -69,7 +69,7 @@ PACKS
 */
 var PACK0 = {
 	name:"SAMPLER",
-	items:[turkeySVG, blowfishSVG, toadSVG, zebraSVG, triceratopsSVG]
+	items:[roosterSVG, blowfishSVG, toadSVG, zebraSVG, triceratopsSVG]
 };
 var PACK1 = {
 	name:"FARM",
@@ -101,7 +101,7 @@ var appData = {
 	audioSetting: 1, //0=mute, 1=beeps, 2=farts
 	typeSetting: 0, //0=numbers, 1=letters
 	petSetting: 0, //0=bunny, 1=frog
-	numberSetting: 15,
+	numberSetting: 10,
 	lastPackPlayed: 0,
 	lastItemPlayed: 0
 }
