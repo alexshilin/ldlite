@@ -4,7 +4,7 @@ body, html{
 	height:100%;
 	font-family:sans-serif;
 	font-size:12px;
-	background-color:#ffb607;
+	background-color:#ffd807;
 	-webkit-transition: background-color 400ms linear;
 	-moz-transition: background-color 400ms linear;
 	-o-transition: background-color 400ms linear;
@@ -41,7 +41,7 @@ body, html{
     position: absolute;
     top: 0px;
     left: 50%;
-    transform: translateX(-40%);
+    transform: translateX(-50%);
 	width:100%;
 }
 .logo svg{
@@ -252,7 +252,7 @@ body, html{
 .v-center {
     position: relative;
     top: 50%;
-    transform: translateY(-55%);
+    transform: translateY(-45%);
 }
 .row:after {
 	visibility: hidden;

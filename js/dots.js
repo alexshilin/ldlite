@@ -717,7 +717,7 @@ function main(){
 		$('#hello').lazylinepainter('destroy');
 		$('#hello').empty();
 		
-		$('body').css({'background':'#ffed03'});
+		$('body').css({'background':'#ffd807'});
 		
 		$('#settings').fadeIn();
 	});
