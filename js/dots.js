@@ -156,11 +156,11 @@ function preloadSounds2(){
 		window.plugins.NativeAudio.preloadSimple( 's_reveal', "sounds/chime_reveal.mp3", function(){}, function(){});
 		window.plugins.NativeAudio.preloadSimple( 's_reveal2', "sounds/farttrumpet.mp3", function(){}, function(){});
 		
-		window.plugins.NativeAudio.preloadComplex( 'bg', 'sounds/bg.mp3', .5, 1, 0, function(){}, function(){});
-		
-		if(!SETTINGS.isMute){
-			window.plugins.NativeAudio.loop( 'bg' );
-		}
+		window.plugins.NativeAudio.preloadComplex( 'bg', 'sounds/bg.mp3', 1, 1, 0, function(){
+			if(!SETTINGS.isMute){
+				window.plugins.NativeAudio.loop( 'bg' );
+			}
+		}, function(){});
 	}
 }
 
