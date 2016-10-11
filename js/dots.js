@@ -19,7 +19,7 @@ console.log = (function (old_function, div_log) {
 APP VARS
 
 */
-var full = true;
+var full = false;
 var SVGpacks = [];
 var OKtoplay = [];
 litefull();
@@ -155,12 +155,6 @@ function preloadSounds2(){
 		window.plugins.NativeAudio.preloadSimple( 's_farts4', "sounds/fart5.mp3", function(){}, function(){});
 		window.plugins.NativeAudio.preloadSimple( 's_reveal', "sounds/chime_reveal.mp3", function(){}, function(){});
 		window.plugins.NativeAudio.preloadSimple( 's_reveal2', "sounds/farttrumpet.mp3", function(){}, function(){});
-		
-		window.plugins.NativeAudio.preloadComplex( 'bg', 'sounds/bg.mp3', 1, 1, 0, function(){
-			if(!SETTINGS.isMute){
-				window.plugins.NativeAudio.loop( 'bg' );
-			}
-		}, function(){});
 	}
 }
 
@@ -511,7 +505,6 @@ function main(){
 			s_reveal = "s_reveal";
 			sounds = s_beeps.slice();
 			usedsounds = [];
-			window.plugins.NativeAudio.loop( 'bg' );
 			playRandomSound();
 			$('.audio-header .selection').html("BEEP BOOPS");
 			tmpDATA.audioSetting=1;
@@ -524,7 +517,6 @@ function main(){
 			s_reveal = "s_reveal2";
 			sounds = s_farts.slice();
 			usedsounds = [];
-			window.plugins.NativeAudio.loop( 'bg' );
 			playRandomSound();
 			$('.audio-header .selection').html("TOOT TOOTS");
 			tmpDATA.audioSetting=2;
@@ -535,7 +527,6 @@ function main(){
 			//turn off sound
 			playS(s_shh);
 			SETTINGS.isMute = true;
-			window.plugins.NativeAudio.stop( 'bg' );
 			$('.audio-header .selection').html("MUTE");
 			tmpDATA.audioSetting=0;
 			setStorage(tmpDATA);

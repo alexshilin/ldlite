@@ -264,21 +264,32 @@ body, html{
 }
 
 .dottype{
-	width:140px;
+	width:120px;
 	margin:0 auto 0 auto;
+	background: #ffc107;
+	border-radius: 60px;
 }
+
 .dottype > div{
 	float:left;
 	box-sizing:border-box;
 	width:60px;
 	height:60px;
 	cursor:pointer;
-	margin-top: 10px;
+	margin: 0 0 0 0;
+	position:relative;
 }
+.dottype > div circle {
+    fill: #FFC107;
+}
+.dottype > div.selected circle {
+    fill: #e71d73;
+}
+
 .dottype > div.selected{
-    width: 80px;
+    /*width: 80px;
     height: 80px;
-    margin-top: 0px;
+    margin-top: 0px;*/
 }
 .dottype svg{
 	width:inherit;
@@ -286,12 +297,30 @@ body, html{
 }
 
 .saveset{
+	display:block;
 	width:100px;
 	height:100px;
 	cursor:pointer;
-	margin:0 auto;
+	margin: 20px auto 0 auto;
 	text-align:center;
 	line-height:100px;
+	border-radius:50%;
+	/*box-shadow: 0px 3px 8px #FF9800, inset 0px 2px 3px #fff;*/
+	position:relative;
+}
+.saveset:before {
+	content: "";
+    display: block;
+    background: #FFEB3B;
+    border-top: 2px solid #ffd807;
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    bottom: -18px;
+    right: -18px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: inset 0px 8px 48px #ffb400;
 }
 .play{
 	width:inherit;
