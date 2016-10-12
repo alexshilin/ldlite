@@ -19,7 +19,7 @@ console.log = (function (old_function, div_log) {
 APP VARS
 
 */
-var full = false;
+var full = true;
 var SVGpacks = [];
 var OKtoplay = [];
 litefull();
