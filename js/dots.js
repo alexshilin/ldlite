@@ -6,18 +6,14 @@ $(window).load(function(){
 
 //use for console logging to a div
 //<div id="con" style="position:absolute; width:100%; height:150px; top:450px; left:0; overflow-y:scroll; z-index:10000; border:1px solid red"></div>
+/*
 console.log = (function (old_function, div_log) { 
     return function (text) {
         old_function(text);
         div_log.append("<p>"+JSON.stringify(text)+"</p>");
     };
 } (console.log.bind(console), $('#con')));
-/*console.error = (function (old_function, div_log) { 
-    return function (text) {
-        old_function(text);
-        div_log.append("<p style='color:red'>"+JSON.stringify(text)+"</p>");
-    };
-} (console.error.bind(console), $('#con')));*/
+*/
 
 /* 
 
