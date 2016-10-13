@@ -298,6 +298,7 @@ function getStorage(){
 				updateData();
 			}else{
 				console.log('doesnt exist...');
+				tmpDATA = appData;
 				setStorage(appData);
 			}
 		})
@@ -313,8 +314,6 @@ function setStorage(v){
 		})
 		.then(function(value){
 			console.log('saved!')
-			console.log(JSON.stringify( value ))
-			tmpDATA = value;
 			updateData();
 		})
 		.catch(function(err){
