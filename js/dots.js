@@ -24,6 +24,7 @@ var SVGpacks = [];
 var OKtoplay = [];
 litefull();
 function litefull(){
+	console.log("litefull "+full);
 	if(!full){
 		SVGpacks = [PACK0, PACK1, PACK2, PACK3, PACK4, PACK5];
 		OKtoplay = ["true", "false", "false", "false", "false", "false"];
@@ -127,6 +128,7 @@ var sounds = s_beeps.slice();
 var usedsounds = [];
 
 function preloadSounds(){
+	console.log("preloadSounds");
 	if( window.plugins && window.plugins.NativeAudio ) {
 		window.plugins.NativeAudio.preloadSimple( 's_start', "sounds/music_vibelong_note_lo.mp3", function(){}, function(){});
 		window.plugins.NativeAudio.preloadSimple( 's_btn', "sounds/click_enter2.mp3", function(){}, function(){});
@@ -381,6 +383,7 @@ MAIN APP
 
 */
 function main(){
+	console.log("MAIN");
 	//removes click delay on ios
 	var attachFastClick = Origami.fastclick;
 	attachFastClick(document.body);
