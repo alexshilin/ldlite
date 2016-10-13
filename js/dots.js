@@ -491,12 +491,14 @@ function main(){
 	$('.options-btn').click(function(){
 		currNav = "settings";
 		playS(s_btn);
-		$('#options').fadeIn('fast');
+		//$('#options').fadeIn('fast');
+		$('#options').show();
 	})
 	$('#options-back .btn').click(function(){
 		currNav = "home";
 		playS(s_back);
-		$('#options').fadeOut('fast');
+		//$('#options').fadeOut('fast');
+		$('#options').hide();
 	})
 	
 	$('.audio div').click(function(){
@@ -595,12 +597,14 @@ function main(){
 	$('.purchase-btn').click(function(){
 		currNav = "purchase";
 		playS(s_btn);
-		$('#purchase').fadeIn('fast');
+		//$('#purchase').fadeIn('fast');
+		$('#purchase').show();
 	})
 	$('#purchase-back .btn').click(function(){
 		currNav = "home";
 		playS(s_back);
-		$('#purchase').fadeOut('fast');
+		$('#purchase').hide();
+		//$('#purchase').fadeOut('fast');
 		/*$('#purchase').fadeOut('fast', function(){
 			$('#purchase .samples').empty();
 		});*/
