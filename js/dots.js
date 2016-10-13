@@ -12,12 +12,12 @@ console.log = (function (old_function, div_log) {
         div_log.append("<p>"+JSON.stringify(text)+"</p>");
     };
 } (console.log.bind(console), $('#con')));
-console.error = (function (old_function, div_log) { 
+/*console.error = (function (old_function, div_log) { 
     return function (text) {
         old_function(text);
         div_log.append("<p style='color:red'>"+JSON.stringify(text)+"</p>");
     };
-} (console.error.bind(console), $('#con')));
+} (console.error.bind(console), $('#con')));*/
 
 /* 
 
@@ -313,14 +313,16 @@ function setStorage(v){
 		})
 		.then(function(value){
 			console.log('saved!')
-			updateData(value);
+			console.log(JSON.stringify( value ))
+			tmpDATA = value;
+			updateData();
 		})
 		.catch(function(err){
 			console.log('error!')
-			console.log(err)
+			console.log(JSON.stringify( err ))
 		})
 }
-function updateData(v){
+function updateData(){
 	console.log('latest: ');
 	console.log(JSON.stringify( tmpDATA ));
 	if(!appSet){
