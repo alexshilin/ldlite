@@ -585,15 +585,17 @@ body, html{
 	}
 	.options-btn {
 	    left: 50%;
-	    width: 120px;
-	    height: 120px;
-	    margin: 0 0 0 -130px;
+	    width: 130px;
+	    height: 130px;
+	    margin: 0 0 0 -150px;
+		bottom: 20px;
 	}
 	.purchase-btn {
 	    right: 50%;
-	    width: 120px;
-	    height: 120px;
-	    margin: 0 -130px 0 0;
+	    width: 130px;
+	    height: 130px;
+	    margin: 0 -150px 0 0;
+		bottom: 20px;
 	}
 	
 	.ball2 {
@@ -630,20 +632,25 @@ body, html{
 	}
 	
 	#options-back, #purchase-back {
-	    padding: 2px 0 0 10px;
+	    padding: 2px 0 0 20px;
 	    width: 100%;
 	    height: 135px;
 	    line-height: 135px;
-	    font-size: 120px;
+	    font-size: 100px;
 	}
 	#options {
 	    padding:135px 0px 20px 0px;
 	}
 	.option-name {
-	    font-size: 38px;
+		padding: 20px 0;
+	    font-size: 42px;
+	}
+	.option-type {
+	    margin: 0 0 20px 0px;
+	    padding: 0 0 10px 0;
 	}
 	.option-type > div {
-	    margin: 5px 10px;
+	    margin: 20px 30px;
 	    width: 150px;
 	    height: 150px;
 	}
@@ -651,17 +658,28 @@ body, html{
 	    padding: 135px 0px 20px 0px;
 	}
 	.purchase-name{
-		font-size:38px;
+		padding: 20px 0;
+		font-size:42px;
+	}
+	.samples-row{
+		margin:10px 0 30px 0
 	}
 	.sample-row{
-		max-width:1200px;
+		max-width:1600px;
+		padding:10px 0 30px 0;
 	}
 	.sample {
-	    width: 200px;
-	    height: 200px;
+	    width: 300px;
+	    height: 300px;
 	}
 	.sample .ion-locked {
 	    font-size: 32px;
+	}
+}
+@media only screen and (max-width: 1242px){
+	.sample-row{
+		max-width:1200px;
+		padding:10px 0 30px 0;
 	}
 }
 @media only screen and (max-width: 1024px){
@@ -680,12 +698,14 @@ body, html{
 	    width: 80px;
 	    height: 80px;
 	    margin: 0 0 0 -100px;
+		bottom: 10px;
 	}
 	.purchase-btn {
 	    right: 50%;
 	    width: 80px;
 	    height: 80px;
 	    margin: 0 -100px 0 0;
+		bottom: 10px;
 	}
 	
 	.ball2 {
@@ -731,7 +751,12 @@ body, html{
 	#options {
 	    padding: 90px 0px 20px 0px;
 	}
+	.option-type {
+	    margin: 0 0 10px 0px;
+	    padding: 0 0 10px 0;
+	}
 	.option-name {
+		padding: 10px 0;
 	    font-size: 26px;
 	}
 	.option-type > div {
@@ -743,9 +768,14 @@ body, html{
 	    padding: 100px 0px 20px 0px;
 	}
 	.purchase-name{
+		padding: 10px 0 0 0;
 		font-size:26px;
 	}
+	.samples-row{
+		margin:10px 0 10px 0
+	}
 	.sample-row{
+		padding: 0 0 0 0;
 		max-width:900px;
 	}
 	.sample {
@@ -772,12 +802,14 @@ body, html{
 	    width: 40px;
 	    height: 40px;
 	    margin: 0 0 0 -50px;
+		bottom: 10px;
 	}
 	.purchase-btn {
 	    right: 50%;
 	    width: 40px;
 	    height: 40px;
 	    margin: 0 -50px 0 0;
+		bottom: 10px;
 	}
 	
 	.ball2 {
@@ -823,7 +855,12 @@ body, html{
 	#options {
 	    padding: 45px 0px 20px 0px;
 	}
+	.option-type {
+	    margin: 0 0 10px 0px;
+	    padding: 0 0 10px 0;
+	}
 	.option-name {
+		padding: 10px 0 0 0;
 	    font-size: 14px;
 	}
 	.option-type > div {
@@ -835,9 +872,14 @@ body, html{
 	    padding: 50px 0px 20px 0px;
 	}
 	.purchase-name {
+		padding: 5px 0;
 	    font-size: 14px;
 	}
+	.samples-row{
+		margin:10px 0 10px 0
+	}
 	.sample-row{
+		padding: 0 0 0 0;
 		max-width:600px;
 	}
 	.sample {
