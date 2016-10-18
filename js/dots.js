@@ -54,6 +54,17 @@ SETTINGS.svgW = 800;
 SETTINGS.svgH = 800;
 SETTINGS.isMute = false;
 SETTINGS.themes = [
+	{bg:'#EF3E36', stroke:'#17BEBB'}, //red, lite blue
+	{bg:'#88D18A', stroke:'#A833B9'}, //lite green, purple
+	{bg:'#E9AFA3', stroke:'#685044'}, //pink, brown
+	{bg:'#1F0322', stroke:'#F0BCD4'}, //dark purple, lite pink
+	{bg:'#A8DADC', stroke:'#E63946'}, //lite blue, red
+	{bg:'#FFCA3A', stroke:'#1982C4'}, //yellow, blue
+	{bg:'#ACF39D', stroke:'#773344'}, //green, purple
+	{bg:'#EDAE49', stroke:'#61210F'}, //yellow, brown
+	{bg:'#99D5C9', stroke:'#2D0320'}, //lite blue, dark magenta
+	{bg:'#DB4C40', stroke:'#89BD9E'}, //burnt orange, lite blue
+	{bg:'#C874D9', stroke:'#1B1F3B'}, //lite purple, dark blue
 	{bg:'#BA3B46', stroke:'#a6ea28'}, //red, green
 	{bg:'#EF476F', stroke:'#fffc00'}, //pink, yellow
 	{bg:'#34344A', stroke:'#F0F757'}, //blue, yellow
@@ -396,6 +407,10 @@ function main(){
 	var wrongs = 0;
 	var scalediff = 1;
 	
+	if(document.documentElement.clientWidth>1400){
+		SETTINGS.dotscale = {min:0.3, mid:0.5, max:.7};
+	}
+	
 	document.addEventListener("dotSetup", startDots);
 	document.addEventListener("dotReady", nextDot);
 	document.addEventListener("dotsDone", function(){$('#next').show();});
@@ -471,7 +486,7 @@ function main(){
 		$('.level').css('color',SETTINGS.theme.stroke);
 		
 		$('#next').removeClass('blink').css({'top':'0px'});
-		$('#nextbig').css({'bottom':'-100px'})
+		$('#nextbig').css({'bottom':'-150px'})
 		$('#settings, #options, #gallery, #dots').hide();
 		
 		$('#gate').fadeIn();
@@ -617,10 +632,10 @@ function main(){
 				var allow = OKtoplay[i] == "true" ? "unlocked" : "";
 				var $packbox = $("<div>", {"class":"row", "style":"width:100%; background:#d21566; padding: 10px 0; margin:0 0 10px 0"})
 				$(".samples").append($packbox);
-				var $pack = $("<div>", {"class": "row", "style":"margin:0 auto; width:100%; max-width:600px;"});
+				var $pack = $("<div>", {"class": "row sample-row", "style":"margin:0 auto; width:100%;"});
 				$packbox.append($pack);
 				var txt = OKtoplay[i] == "true" ? "" : "color:#37cd82";
-				var $header = $("<div>", {"class":"row", "style":"color:white; font-size:14px; font-weight:bold; "+txt});
+				var $header = $("<div>", {"class":"row purchase-name", "style":"color:white; "+txt});
 				$header.html(SVGpacks[i].name);
 				$pack.append($header);
 				for(var k=0; k<s.length; k++){
@@ -826,7 +841,7 @@ function main(){
 					"<div class='tracking__scale noBlur'>" + n + "</div>"+
 				"</div>");
 			//setPosition($('.dot' + i), ps[i].x, ps[i].y);
-			$('.dot' + i).css({'left':ps[i].x, 'top':ps[i].y})
+			$('.dot' + i).css({'left':ps[i].x, 'top':ps[i].y}).hide();
 			if(i==0){
 				setDotScale($(".dot"+i), SETTINGS.dotscale.min, SETTINGS.diameter);
 				$(".dot"+i+" .tracking__scale").addClass('used').css('border', SETTINGS.theme.stroke+' solid 10px');
@@ -865,6 +880,12 @@ function main(){
 		resize();
 		
 		startLine();
+		
+		var showdelay = 200;
+		for (var i = 0; i < ps.length; i++) {
+			$('.dot'+i).delay(showdelay).show(0);
+			showdelay+=70;
+		}
 	}
 	
 	function clickDot(e){
@@ -899,7 +920,7 @@ function main(){
 				hideDots();
 				$('#hint').hide();
 				//$('#next').addClass('blink');
-				$('#next').delay(2500).animate({'top':'-50px'}, 400, function(){
+				$('#next').delay(1400).animate({'top':'-100px'}, 300, function(){
 					$('#nextbig').animate({'bottom':'20px'}, 500)
 				})
 				$("#hello").lazylinepainter('resume');	

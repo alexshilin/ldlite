@@ -123,10 +123,10 @@ body, html{
 	
 	width:60px;
 	height:60px;
-	line-height:80px;
+	line-height:60px;
 	text-align: center;
 	font-weight:bolder;
-	font-size:32px;
+	font-size:34px;
 	background:white; 
 	color:black;
 	
@@ -428,6 +428,9 @@ body, html{
 	/*padding-top: 50px;*/
 	padding:50px 0px 20px 0px;
 }
+.sample-row{
+	max-width:600px;
+}
 .samples{
 	width:100%;
 	text-align:center;
@@ -482,6 +485,9 @@ body, html{
     color: white;
     padding: 5px 0;
     background: #d21566;
+}
+.purchase-name{
+	font-size:14px;
 }
 .option-type {
     text-align: center;
@@ -563,4 +569,282 @@ body, html{
     color: white;
     opacity: 0.25;
     font-family: courier;
+}
+
+/* MEDIA SCALING */
+@media only screen and (max-width: 2048px){
+	.logo svg{
+		width: 500px;
+	}
+	.upgrade-btn {
+	    width: 135px;
+	    height: 135px;
+	}
+	.v-center{
+		transform: translateY(-40%) scale(3.5);
+	}
+	.options-btn {
+	    left: 50%;
+	    width: 120px;
+	    height: 120px;
+	    margin: 0 0 0 -130px;
+	}
+	.purchase-btn {
+	    right: 50%;
+	    width: 120px;
+	    height: 120px;
+	    margin: 0 -130px 0 0;
+	}
+	
+	.ball2 {
+	    height: 30px;
+	    width: 30px;
+	    margin: 0 0 0 -15px;
+	}
+	
+	#home {
+	    width: 120px;
+	    height: 120px;
+	    line-height: 110px;
+	    font-size: 100px;
+	}
+	#hint {
+	    width: 120px;
+	    height: 120px;
+	    line-height: 110px;
+	    font-size: 100px;
+	}
+	#next {
+	    width: 120px;
+	    height: 120px;
+	    line-height: 110px;
+	    font-size: 110px;
+	}
+	#nextbig {
+	    left: 50%;
+	    width: 150px;
+	    height: 150px;
+	    line-height: 150px;
+	    font-size: 150px;
+	    margin: 0 0 0 -75px;
+	}
+	
+	#options-back, #purchase-back {
+	    padding: 2px 0 0 10px;
+	    width: 100%;
+	    height: 135px;
+	    line-height: 135px;
+	    font-size: 120px;
+	}
+	#options {
+	    padding:135px 0px 20px 0px;
+	}
+	.option-name {
+	    font-size: 38px;
+	}
+	.option-type > div {
+	    margin: 5px 10px;
+	    width: 150px;
+	    height: 150px;
+	}
+	#purchase {
+	    padding: 135px 0px 20px 0px;
+	}
+	.purchase-name{
+		font-size:38px;
+	}
+	.sample-row{
+		max-width:1200px;
+	}
+	.sample {
+	    width: 200px;
+	    height: 200px;
+	}
+	.sample .ion-locked {
+	    font-size: 32px;
+	}
+}
+@media only screen and (max-width: 1024px){
+	.logo svg{
+		width: 300px;
+	}
+	.upgrade-btn {
+	    width: 90px;
+	    height: 90px;
+	}
+	.v-center{
+		transform: translateY(-40%) scale(2);
+	}
+	.options-btn {
+	    left: 50%;
+	    width: 80px;
+	    height: 80px;
+	    margin: 0 0 0 -100px;
+	}
+	.purchase-btn {
+	    right: 50%;
+	    width: 80px;
+	    height: 80px;
+	    margin: 0 -100px 0 0;
+	}
+	
+	.ball2 {
+	    height: 20px;
+	    width: 20px;
+	    margin: 0 0 0 -10px;
+	}
+	
+	#home {
+	    width: 80px;
+	    height: 80px;
+	    line-height: 70px;
+	    font-size: 66px;
+	}
+	#hint {
+	    width: 80px;
+	    height: 80px;
+	    line-height: 70px;
+	    font-size: 66px;
+	}
+	#next {
+	    width: 80px;
+	    height: 80px;
+	    line-height: 70px;
+	    font-size: 70px;
+	}
+	#nextbig {
+	    left: 50%;
+	    width: 100px;
+	    height: 100px;
+	    line-height: 100px;
+	    font-size: 100px;
+	    margin: 0 0 0 -50px;
+	}
+	
+	#options-back, #purchase-back {
+	    padding: 2px 0 0 10px;
+	    width: 100%;
+	    height: 90px;
+	    line-height: 90px;
+	    font-size: 70px;
+	}
+	#options {
+	    padding: 90px 0px 20px 0px;
+	}
+	.option-name {
+	    font-size: 26px;
+	}
+	.option-type > div {
+	    margin: 5px 10px;
+	    width: 100px;
+	    height: 100px;
+	}
+	#purchase {
+	    padding: 100px 0px 20px 0px;
+	}
+	.purchase-name{
+		font-size:26px;
+	}
+	.sample-row{
+		max-width:900px;
+	}
+	.sample {
+	    width: 150px;
+	    height: 150px;
+	}
+	.sample .ion-locked {
+	    font-size: 24px;
+	}
+}
+@media only screen and (max-width: 568px){
+	.logo svg{
+		width: 150px;
+	}
+	.upgrade-btn {
+	    width: 45px;
+	    height: 45px;
+	}
+	.v-center{
+		transform: translateY(-40%);
+	}
+	.options-btn {
+	    left: 50%;
+	    width: 40px;
+	    height: 40px;
+	    margin: 0 0 0 -50px;
+	}
+	.purchase-btn {
+	    right: 50%;
+	    width: 40px;
+	    height: 40px;
+	    margin: 0 -50px 0 0;
+	}
+	
+	.ball2 {
+	    height: 10px;
+	    width: 10px;
+	    margin: 0 0 0 -5px;
+	}
+	
+	#home {
+	    width: 40px;
+	    height: 40px;
+	    line-height: 30px;
+	    font-size: 26px;
+	}
+	#hint {
+	    width: 40px;
+	    height: 40px;
+	    line-height: 30px;
+	    font-size: 24px;
+	}
+	#next {
+	    width: 40px;
+	    height: 40px;
+	    line-height: 30px;
+	    font-size: 30px;
+	}
+	#nextbig {
+	    left: 50%;
+	    width: 60px;
+	    height: 60px;
+	    line-height: 60px;
+	    font-size: 60px;
+	    margin: 0 0 0 -30px;
+	}
+	
+	#options-back, #purchase-back {
+	    padding: 2px 0 0 10px;
+	    width: 100%;
+	    height: 45px;
+	    line-height: 45px;
+	    font-size: 30px;
+	}
+	#options {
+	    padding: 45px 0px 20px 0px;
+	}
+	.option-name {
+	    font-size: 14px;
+	}
+	.option-type > div {
+	    margin: 5px 10px;
+	    width: 50px;
+	    height: 50px;
+	}
+	#purchase {
+	    padding: 50px 0px 20px 0px;
+	}
+	.purchase-name {
+	    font-size: 14px;
+	}
+	.sample-row{
+		max-width:600px;
+	}
+	.sample {
+	    width: 100px;
+	    height: 100px;
+	}
+	.sample .ion-locked {
+	    font-size: 12px;
+	}
 }
