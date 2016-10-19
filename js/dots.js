@@ -435,6 +435,8 @@ function main(){
 	$(".upgrade-btn").on('click', function(){
 		if(device.platform=="Android")
 			window.open("https://play.google.com/store/apps/details?id=com.lebored.lazydots.full");
+		if(device.platform=="iOS")
+			window.open("https://itunes.apple.com/app/lazydots/id1166624971");
 	})
 	
 	$('.dottype div').on('click', function(){
