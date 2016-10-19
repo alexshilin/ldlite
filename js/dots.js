@@ -432,6 +432,11 @@ function main(){
 	})
 	//////////
 	
+	$(".upgrade-btn").on('click', function(){
+		if(device.platform=="Android")
+			window.open("https://play.google.com/store/apps/details?id=com.lebored.lazydots.full");
+	})
+	
 	$('.dottype div').on('click', function(){
 		$('.dottype div').removeClass('selected');
 		$(this).addClass('selected');
